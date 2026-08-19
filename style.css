@@ -253,6 +253,57 @@ section h2 {
     opacity: 0.95;
 }
 
+.app-info h4 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.app-highlights {
+    margin: 2rem 0 3rem 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.highlight-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.highlight-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
 .app-features {
     margin: 2.5rem 0;
 }
@@ -499,5 +550,27 @@ footer p {
 
     .app-features ul {
         grid-template-columns: 1fr;
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        .highlights-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .app-info h3 {
+            font-size: 1.1rem;
+        }
+
+        .app-info > p {
+            font-size: 1rem;
+        }
+
+        .btn-text {
+            font-size: 0.9rem;
+        }
     }
 }
